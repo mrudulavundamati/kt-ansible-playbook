@@ -1,0 +1,11 @@
+source_server: ACE
+target_server: MQ_ACE
+mq_backup_dir: "/backup/mq_backup/"
+mq_manager_name: "TestQM"
+mq_qm_data_src: "/var/mqm/qmgrs/{{ mq_manager_name }}/qm.ini"
+mq_backup_files:
+  - "{{ mq_manager_name }}.mqsc"
+  - "{{ mq_manager_name }}_auth.txt"
+  - "qm.ini"
+destination_dir: "/tmp/backup/mq_backup"
+ansible_copy_path: "/etc/ansible/copy/"
