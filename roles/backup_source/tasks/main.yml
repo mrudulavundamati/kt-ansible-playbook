@@ -1,3 +1,4 @@
+---
 - name: Create MQ backup directory
   ansible.builtin.file:
     path: "{{ mq_backup_dir }}"
