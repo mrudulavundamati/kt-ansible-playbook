@@ -1,0 +1,11 @@
+- name: Ensure the destination directory exists on ACE
+  ansible.builtin.file:
+    path: "{{ destination_dir }}"
+    state: directory
+    mode: '0777'
+
+- name: Copy MQSC backup files
+  ansible.builtin.copy:
+    src: "{{ ansible_copy_path }}{{ item }}"
+    dest: "{{ destination_dir }}/{{ item }}"
+  loop: "{{ mq_backup_files }}"
