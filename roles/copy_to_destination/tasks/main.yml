@@ -1,3 +1,4 @@
+---
 - name: Ensure the destination directory exists on ACE
   ansible.builtin.file:
     path: "{{ destination_dir }}"
