@@ -1,13 +1,13 @@
 ---
 - name: Backup IBM Queue Manager
-  hosts: "{{ source_server }}"
+  hosts: [source_server]
   become: true
 
   roles:
     - backup_source
 
 - name: Copy files from Ansible control node to destination server
-  hosts: "{{ target_server }}"
+  hosts: [target_server]
   
   roles:
     - copy_to_destination
