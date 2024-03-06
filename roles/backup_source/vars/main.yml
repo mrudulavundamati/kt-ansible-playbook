@@ -1,6 +1,4 @@
 ---
-source_server: ACE
-target_server: MQ_ACE
 mq_backup_dir: "/backup/mq_backup/"
 mq_manager_name: "TestQM"
 mq_qm_data_src: "/var/mqm/qmgrs/{{ mq_manager_name }}/qm.ini"
